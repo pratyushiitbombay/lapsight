@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lapsight: see your .fit, .gpx and .tcx workout files beautifully. Private: files never leave your device." />
+    <meta name="theme-color" content="#0b140d" />
+    <title>Lapsight</title>
+    <link rel="icon" href="favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Lapsight" />
+    <script>
+      // Apply the saved light/dark choice before the page draws (see src/lib/theme.ts).
+      try {
+        var t = localStorage.getItem('fitviewer.theme');
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-LmOkx1zr.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DP_WsRsP.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
